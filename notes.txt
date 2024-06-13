@@ -1,0 +1,44 @@
+activate web environment with:
+conda activate web-ta
+cd web
+streamlit run __main__.py
+----- OR -----
+double click web-ta.bat
+
+activate machine learning environment with:
+conda activate ta-jacob
+
+Libraries for web:
+pip install streamlit
+pip install streamlit_option_menu
+pip install streamlit-navigation-bar
+pip install streamlit-pdf-viewer
+pip install pdf2image
+pip install pytesseract
+pip install reportlab
+pip install transformers sentencepiece
+pip install mysql-connector-python
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+Libraries for machine learning:
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install datasets transformers sentencepiece accelerate evaluate sacrebleu 
+pip install nltk
+pip install imgaug
+pip install opencv-python
+pip install keras-ocr
+pip install tensorflow
+
+mentions:
+# translation method for looong text
+https://stackoverflow.com/questions/68185061/strange-results-with-huggingface-transformermarianmt-translation-of-larger-tex
+
+set environment variables:
+conda env config vars set VARIABLE_NAME=variable_value
+
+see environment variables:
+conda env config vars list
+
+unset environment variables:
+conda env config vars unset VARIABLE_NAME
+

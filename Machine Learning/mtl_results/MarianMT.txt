@@ -1,0 +1,110 @@
+MarianMT_1: ~6 Hours or more
+No freezing layers
+dataset_rows=1.000.000
+args = Seq2SeqTrainingArguments(
+   f"checkpoint\opus-mt-en-id-finetuned-en-to-id",
+   evaluation_strategy = "epoch",
+   learning_rate=2e-5,
+   per_device_train_batch_size=32,
+   per_device_eval_batch_size=32,
+   weight_decay=0.01,
+   save_total_limit=10,
+   num_train_epochs=10,
+   predict_with_generate=True,
+) 
+Epoch,BLEU,METEOR,validation_loss
+1,29.0957,0.5437,1.3877407312393188
+2,29.174,0.5452,1.3195120096206665
+3,29.4207,0.5474,1.289121150970459
+4,29.9777,0.5514,1.2663772106170654
+5,30.0686,0.5513,1.255908727645874
+6,29.9696,0.5528,1.2486486434936523
+7,30.5044,0.5531,1.2396639585494995
+8,30.3386,0.553,1.235921859741211
+9,30.4106,0.5524,1.233915090560913
+10,30.3819,0.5522,1.2335071563720703
+
+MarianMT_2: ~5 Hours 50 Minutes
+No freezing layers
+dataset_rows=1.000.000
+Dataset Normalization (lower case and remove punctuations)
+args = Seq2SeqTrainingArguments(
+   f"opus-mt-en-id-finetuned-en-to-id",
+   evaluation_strategy = "epoch",
+   save_strategy= "epoch",
+   learning_rate=1e-5,
+   per_device_train_batch_size=32,
+   per_device_eval_batch_size=32,
+   weight_decay=0.01,
+   save_total_limit=10,
+   num_train_epochs=10,
+   predict_with_generate=True,
+)
+Epoch,BLEU,METEOR,validation_loss
+1,22.9367,0.4556,1.591963768005371
+2,23.913,0.4696,1.4970057010650635
+3,24.368,0.47,1.4531182050704956
+4,24.5081,0.474,1.4232003688812256
+5,25.0466,0.4732,1.4028187990188599
+6,24.8104,0.4767,1.3872017860412598
+7,24.9557,0.4766,1.3715323209762573
+8,25.0506,0.4792,1.3692772388458252
+9,25.134,0.4753,1.3654109239578247
+10,25.0673,0.4769,1.3645352125167847
+
+MarianMT_3: ~5 Hours 50 Minutes
+No freezing layers
+dataset_rows=1.000.000
+Dataset Normalization (lower case and remove punctuations)
+args = Seq2SeqTrainingArguments(
+   f"opus-mt-en-id-finetuned-en-to-id",
+   evaluation_strategy = "epoch",
+   save_strategy= "epoch",
+   learning_rate=2e-5,
+   per_device_train_batch_size=32,
+   per_device_eval_batch_size=32,
+   weight_decay=0.01,
+   save_total_limit=10,
+   num_train_epochs=10,
+   predict_with_generate=True,
+)
+Epoch,BLEU,METEOR,validation_loss
+1,23.3841,0.4621,1.5218024253845215
+2,24.5163,0.4715,1.4290255308151245
+3,24.6512,0.4711,1.3912750482559204
+4,24.7938,0.4783,1.3636884689331055
+5,25.3347,0.4801,1.3468246459960938
+6,25.1717,0.4808,1.3369464874267578
+7,25.8966,0.4835,1.322221279144287
+8,25.5077,0.4841,1.3239166736602783
+9,25.6838,0.4819,1.320252537727356
+10,25.4792,0.4835,1.3202238082885742
+
+MarianMT_4: ~5 Hours 57 Minutes
+No freezing layers
+dataset_rows=1.000.000
+Dataset Normalization (lower case)
+args = Seq2SeqTrainingArguments(
+   f"opus-mt-en-id-finetuned-en-to-id",
+   evaluation_strategy = "epoch",
+   save_strategy= "epoch",
+   learning_rate=2e-5,
+   per_device_train_batch_size=32,
+   per_device_eval_batch_size=32,
+   weight_decay=0.01,
+   save_total_limit=10,
+   num_train_epochs=10,
+   predict_with_generate=True,
+)
+Epoch,BLEU,METEOR,validation_loss
+1,29.3939,0.5435,1.3957688808441162
+2,29.9761,0.5502,1.316219687461853
+3,30.1123,0.55,1.2815277576446533
+4,30.2639,0.5509,1.2608836889266968
+5,30.9412,0.5586,1.2432924509048462
+6,30.5593,0.5559,1.2404811382293701
+7,31.3782,0.5594,1.2294076681137085
+8,31.0515,0.5563,1.2265417575836182
+9,31.1618,0.557,1.2219510078430176
+10,30.7464,0.5564,1.2222956418991089
+
